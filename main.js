@@ -12,7 +12,7 @@ function changeAir(key, currentSize) {
   var newSize = currentSize + key;
   if (newSize <= 0) {
     balloonElem.innerHTML = "Done";
-    balloonElem.style.fontSize = "60px";
+    balloonElem.style.fontSize = "30px";
     document.removeEventListener("keyup", keyboardInfo);
   } else if (newSize >= 60) {
     balloonElem.innerHTML = "💥";
@@ -22,6 +22,5 @@ function changeAir(key, currentSize) {
     balloonElem.style.fontSize = `${newSize}` + "px";
   }
 }
-
 var balloonElem = document.getElementById("balloon");
 document.addEventListener("keyup", keyboardInfo);
